@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "b564853c-7fe9-4049-be46-16ca53e62878",
+		"name": "movies_api_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24713050",
+		"_collection_link": "https://planetary-water-458498.postman.co/workspace/My-Workspace~4f1d70c6-22cd-43a0-82f8-7988f995f705/collection/24713050-b564853c-7fe9-4049-be46-16ca53e62878?action=share&source=collection_link&creator=24713050"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/register/",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"siri3\",\r\n    \"password\": \"testpassword123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/movies/",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2MTM4MDM0LCJpYXQiOjE3NjYxMzQ0MzQsImp0aSI6IjRhZTg1ZmI2MjI0ZDQ3NDlhMzMwNDM3MzBmZmYwOWFkIiwidXNlcl9pZCI6IjMifQ.8FUTnPui9NR6zlCpIUBwEJeIZ38ZWN-Kox9o690nm5g",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/movies/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"movies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token Generation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"siri4\",\r\n    \"password\": \"testpassword123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token Generation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2NjIyODg2MiwiaWF0IjoxNzY2MTQyNDYyLCJqdGkiOiJiYTRiMjk0MWU4OWM0NTBmYjI0M2ZiODllYzNmNWY3ZiIsInVzZXJfaWQiOiIzIn0.zZKeX_EHs0XqHTlKdsZMBTLoaL9TiG3wDucgxQFGKB0\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/refresh/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Collections",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2MTQ2MTMwLCJpYXQiOjE3NjYxNDI1MzAsImp0aSI6IjRkY2M0Y2E3Nzc3MDQyNmQ5OTBjODhiZWZiM2E1NDhmIiwidXNlcl9pZCI6IjMifQ.HQ3RO0S4Re4Ik-YQsGhDdIh1GEDqLfuN0ruAVD2oGjM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/collections/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"collections",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Collection",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2MTQ2MTMwLCJpYXQiOjE3NjYxNDI1MzAsImp0aSI6IjRkY2M0Y2E3Nzc3MDQyNmQ5OTBjODhiZWZiM2E1NDhmIiwidXNlcl9pZCI6IjMifQ.HQ3RO0S4Re4Ik-YQsGhDdIh1GEDqLfuN0ruAVD2oGjM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My Fav Movies\",\r\n  \"description\": \"Collection description\",\r\n  \"movies\": [\r\n    {\r\n      \"title\": \"Movie 1\",\r\n      \"description\": \"Test movie\",\r\n      \"genres\": \"Action\"\r\n    },\r\n    {\r\n      \"title\": \"Movie 2\",\r\n      \"description\": \"Another movie\",\r\n      \"genres\": \"Drama\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/collections/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"collections",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Collection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/collections/<53a4f8cd-f00d-4766-9255-4a28d6aa4ce4>/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"collections",
+						"<53a4f8cd-f00d-4766-9255-4a28d6aa4ce4>",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Collection",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2MTQ2MTMwLCJpYXQiOjE3NjYxNDI1MzAsImp0aSI6IjRkY2M0Y2E3Nzc3MDQyNmQ5OTBjODhiZWZiM2E1NDhmIiwidXNlcl9pZCI6IjMifQ.HQ3RO0S4Re4Ik-YQsGhDdIh1GEDqLfuN0ruAVD2oGjM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uuid\": \"53a4f8cd-f00d-4766-9255-4a28d6aa4ce4\",\r\n    \"title\": \"My Fav Movies\",\r\n    \"description\": \"Collection description\",\r\n    \"movies\": [\r\n        {\r\n            \"title\": \"Movie 1\",\r\n            \"description\": \"Test movie\",\r\n            \"genres\": \"Action\"\r\n        },\r\n        {\r\n            \"title\": \"Movie 2\",\r\n            \"description\": \"Comedy movie\",\r\n            \"genres\": \"Drama\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/collections/53a4f8cd-f00d-4766-9255-4a28d6aa4ce4/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"collections",
+						"53a4f8cd-f00d-4766-9255-4a28d6aa4ce4",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Collection",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2MTQ2MTMwLCJpYXQiOjE3NjYxNDI1MzAsImp0aSI6IjRkY2M0Y2E3Nzc3MDQyNmQ5OTBjODhiZWZiM2E1NDhmIiwidXNlcl9pZCI6IjMifQ.HQ3RO0S4Re4Ik-YQsGhDdIh1GEDqLfuN0ruAVD2oGjM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/collections/<uuid>/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"collections",
+						"<uuid>",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
