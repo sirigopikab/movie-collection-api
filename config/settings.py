@@ -27,6 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+print("TMDB KEY:", os.getenv("TMDB_API_KEY"))
+
 
 # Application definition
 
