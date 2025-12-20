@@ -17,10 +17,13 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from monitoring.views import RequestCountView, ResetRequestCountView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("movies.urls")),
     path('', include("users.urls")),
     path('', include("movie_collections.urls")),
+    path("request-count/", RequestCountView.as_view()),
+    path("request-count/reset/", ResetRequestCountView.as_view()),
 ]
